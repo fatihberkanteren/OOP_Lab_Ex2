@@ -23,22 +23,15 @@ public class GPSProgrami {
         String[] enBoy;
         enBoy = new String[2];
         int eleman = 0;
-        for (int i = 0; i < yeniVeri.length / 2; i++) {
+        for (String yeniVeri1 : yeniVeri) {
             for (String sayilar1 : sayilar) {
-                if (yeniVeri[i].startsWith(sayilar1)) {
-                    enBoy[eleman] = yeniVeri[i];
+                if (yeniVeri1.startsWith(sayilar1)) {
+                    enBoy[eleman] = yeniVeri1;
                     eleman++;
                 }
             }
         }
-        for (int i = yeniVeri.length / 2; i < yeniVeri.length; i++) {
-            for (String sayilar1 : sayilar) {
-                if (yeniVeri[i].startsWith(sayilar1)) {
-                    enBoy[eleman] = yeniVeri[i];
-                    eleman++;
-                }
-            }
-        }
+        
         this.enlem = enBoy[0];
         this.boylam = enBoy[1];
         System.out.println("GPS türü : " + veri[0]
